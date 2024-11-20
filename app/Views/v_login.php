@@ -53,14 +53,14 @@
             <h3>Entrar</h3>
             <p>Faça login para acessar sua conta</p>
         </div>
-        <form>
+        <form class="p-3 bg-light" id="id_form_log"action="<?php echo base_url("C_Access/r_log_usu");?>" method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                <input type="email" class="form-control" id="id_log_email" name="txt_log_email" placeholder="Digite seu email" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                <input type="password" class="form-control" id="id_log_password" name="txt_log_password" placeholder="Digite sua senha" required>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="form-check">
@@ -80,7 +80,7 @@
             <h4 class="mb-0 pt-2">Cadastro</h4>
             <p class="mb-0 text-muted">Crie sua conta</p>
         </div>
-        <form class="p-3 bg-light" id="id_form_cad">
+        <form class="p-3 bg-light" id="id_form_cad" action="<?php echo base_url("C_Access/r_cad_usu");?>" method="POST">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <label for="Nome" class="form-label">Nome Completo</label>
@@ -89,6 +89,10 @@
                 <div class="col-lg-6 col-md-12">
                     <label for="Telefone" class="form-label">Telefone</label>
                     <input type="text" class="form-control form-control-sm" id="id_cad_tel" name="txt_cad_tel" placeholder="Digite seu Tel" required>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <label for="cep" class="form-label">Cep</label>
+                    <input type="text" class="form-control form-control-sm" id="id_cad_cep" name="txt_cad_cep" placeholder="Digite seu Cep" required>
                 </div>
                 <div class="col-lg-10 col-md-12">
                     <label for="Endereco" class="form-label">Endereço</label>
@@ -117,7 +121,7 @@
                     <label class="form-check-label" for="rememberMe">Lembrar-me</label>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary" onclick="fjs_cadastro();">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
         <div class="footer-links mt-4">
             <p>Já tem uma conta? <a href="#" onclick="fjs_logoucad('log')">entre</a></p>
@@ -142,16 +146,16 @@
         }
     }
 
-    function fjs_cadastro()
-    {
-        console.log($('#id_tab_cadastro').serialize());
-        // $.ajax
-        // ({
-        //     url:'/r_cadastro',
-        //     type:'POST',
-        //     data:$('#id_tab_cadastro').serialize()
-        // })
-    }
+    // function fjs_cadastro()
+    // {
+    //     console.log($('#id_tab_cadastro').serialize());
+    //     // $.ajax
+    //     // ({
+    //     //     url:'/r_cadastro',
+    //     //     type:'POST',
+    //     //     data:$('#id_tab_cadastro').serialize()
+    //     // })
+    // }
 </script>
 </body>
 </html>
