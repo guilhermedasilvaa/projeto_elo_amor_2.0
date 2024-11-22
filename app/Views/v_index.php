@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+
     <?php
         echo view('includes/header');
     ?>
-<body>
-    <div class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <!-- <?php 
+        <?php 
             //echo view('includes/v_menu');
-        ?> -->
-    </div>
+            echo view($breadcrumb);
+        ?> 
 
     <div class="container">
         <div class="content">
@@ -25,5 +22,6 @@
     <?php
         echo view('includes/footer');
     ?>
+
 </body>
 </html>

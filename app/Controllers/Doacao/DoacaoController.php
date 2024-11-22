@@ -32,11 +32,17 @@ class DoacaoController extends BaseController
 
         $arrDataPage = array(
             'title' => 'Tela Principal',
+            'breadcrumb' => 'doacao/breadcrumb/v_breadcrumb_doacao',
             'body_target' => 'doacao/v_principal',
             'controller' => 'mtc_acao_principal',
             'data' => $data
         );
 
         echo view('v_index', $arrDataPage);
+    }
+
+    public function mtc_donation()
+    {
+        
     }
 }

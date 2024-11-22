@@ -153,7 +153,7 @@ class C_Access extends BaseController
 
     public function mtc_session($w_user, $n_pass)
     {
-        $response = array();
+        // $response = array();
         $response['success'] = false;
 
         $result = $this->tb_usuario->mtm_doAccess($w_user, $n_pass);

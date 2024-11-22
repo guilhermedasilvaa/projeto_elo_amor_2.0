@@ -10,7 +10,7 @@ class TbUsuario extends Model
     protected $table            = 'tb_usuario';
     protected $primaryKey       = 'id_usuario';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = ['nome_usu', 'cep_end_usu', 'end_usu', 'img_usu', 'tel_usu', 'ponto_col', 'email_usu', 'senha_usu'];
