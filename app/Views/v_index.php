@@ -22,6 +22,3 @@
     <?php
         echo view('includes/footer');
     ?>
-
-</body>
-</html>
